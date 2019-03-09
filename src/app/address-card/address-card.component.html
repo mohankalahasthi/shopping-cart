@@ -1,0 +1,20 @@
+
+
+
+<!-- nfgor example -->
+<div>
+<h1>{{user.name}}</h1>
+<h3>{{user.title}}</h3>
+<p>{{user.address}}</p>
+<div>
+  <p>Phone:</p>
+  <p *ngFor="let phone1 of user.phone">{{phone1}}</p>
+  </div>
+  <!-- ngIf example if array is empty officecontact is not displyed -->
+  <div *ngIf="user.officecontact.length > 0">
+    <p>OfficeContact:</p>
+  <!-- without ng for  -->
+    <p>{{user.officecontact[0]}}</p>
+    <p>{{user.officecontact[1]}}</p>
+  </div>
+</div>

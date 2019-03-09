@@ -1,0 +1,22 @@
+<div class="main">
+    <div>
+        <h1>List Item</h1>
+        
+    </div>
+       
+    
+        <input [(ngModel)] = "newItem"  type="text" class="addite" placeholder="Additem">
+        <input type="Date" name="Date" id="Date" class="date">
+    
+    <button (click)="pushItem()">Add</button>
+    <ul>
+        <li *ngFor = "let i of items ; let ind = index">
+            {{i}}
+            <span (click)="removeItem(ind)">x</span>
+        </li>
+    </ul>
+
+</div>
+<div>
+    <h1> {{dateMessage}}</h1>
+</div>
