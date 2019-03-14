@@ -3,30 +3,31 @@
         <h1>List Item</h1>
     </div>
     <div fxLayout="row" fxLayoutAlign="space-around center">
-        <div fxFlex="100" >
-            <input [(ngModel)]="newItem" type="text" class="addite" placeholder="Additem" />
-            <input type="Date" name="Date" id="Date" class="date" />
 
-            <button (click)="pushItem()">Add</button>
-            <ul>
-                <li *ngFor="let i of items; let ind = index">
-                    {{ i }}
-                    <span (click)="removeItem(ind)">x</span>
-                </li>
-            </ul>
-        </div>
+        <input [(ngModel)]="newItem" type="text" class="addite" placeholder="Additem" />
+        <input type="Date" name="Date" id="Date" class="date" />
+
+        <button (click)="pushItem()">Add</button>
     </div>
-</div>  
     <div>
-        <h1>{{ dateMessage }}</h1>
+        <ul>
+            <li *ngFor="let i of items; let ind = index">
+                {{ i }}
+                <span (click)="removeItem(ind)">x</span>
+            </li>
+        </ul>
     </div>
 
-    <div fxLayout="row" fxLayoutAlign="space-around center">
-        <div fxFlex="100">
-            <h2>item1</h2>
-            <h2>item1</h2>
-            <h2>item1</h2>
-            <h2>item1</h2>
-            <h2>item1</h2> 
-        </div>
-    </div>
+</div>
+<div>
+    <h1>{{ dateMessage }}</h1>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-around center">
+    <h2>item1</h2>
+    <h2>item1</h2>
+    <h2>item1</h2>
+    <h2>item1</h2>
+    <h2>item1</h2>
+</div>
+<hr>

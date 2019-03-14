@@ -10,6 +10,7 @@ export class AddressCardComponent implements OnInit {
   user: any;
   @Input('name') userName:string;
   isCollapsed : boolean=true;
+  inputText : string ="initial value";
   
   constructor() { 
     // ngFor object example
